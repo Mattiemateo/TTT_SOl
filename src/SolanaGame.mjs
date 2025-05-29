@@ -99,6 +99,7 @@ export async function playGame(gameId, player, position) {
     return await fetchGameState(gameId);
   } catch (err) {
     console.error("Failed to make a move:", err);
+    console.log("player: ", wallet.publicKey.toString());
     if (err.logs) {
       console.error("Transaction logs:", err.logs);
     }
