@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe on Solana</title>
+    <script defer type="module" src="ui.js"></script>
+    <script defer type="module" src="SolanaGame.mjs"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic-Tac-Toe on Solana</h1>
+        <p id="status">Loading game...</p>
+        <button id="connect-btn">Connect Wallet</button>
+        <input id="game-id-input" placeholder="Enter Game ID" />
+        <button id="init-btn">Create/Join Game</button>
+        <div id="game-board">
+            <div class="cell" id="cell-0" data-index="0"></div>
+            <div class="cell" id="cell-1" data-index="1"></div>
+            <div class="cell" id="cell-2" data-index="2"></div>
+            <div class="cell" id="cell-3" data-index="3"></div>
+            <div class="cell" id="cell-4" data-index="4"></div>
+            <div class="cell" id="cell-5" data-index="5"></div>
+            <div class="cell" id="cell-6" data-index="6"></div>
+            <div class="cell" id="cell-7" data-index="7"></div>
+            <div class="cell" id="cell-8" data-index="8"></div>
+        </div>
+    </div>
+</body>
+</html>
