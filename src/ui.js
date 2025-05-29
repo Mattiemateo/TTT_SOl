@@ -69,10 +69,11 @@ document.querySelectorAll('.cell').forEach(cell => {
       return;
     }
     const pos = parseInt(cell.dataset.index, 10);
+    // Ensure currentPlayer is set correctly
     await playGame(currentGameId, currentPlayer, pos);
     await updateBoard();
     // Optionally switch player (for local testing)
-    // currentPlayer = currentPlayer === 1 ? 2 : 1;
+    currentPlayer = currentPlayer === 1 ? 2 : 1; // Example logic to switch players
   };
 });
 

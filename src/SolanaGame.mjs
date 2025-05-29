@@ -86,10 +86,11 @@ export async function playGame(gameId, player, position) {
     const state = await fetchGameState(gameId);
     console.log("Current game state:", state);
 
+    // Ensure the correct player is signing the transaction
     const tx = await program.methods
       .playGame(player, position)
       .accounts({
-        player: wallet.publicKey,
+        player: wallet.publicKey, // Ensure this is the correct player
         gameData: gamePDA,
       })
       .rpc();
@@ -103,6 +104,7 @@ export async function playGame(gameId, player, position) {
     }
   }
 }
+
 
 export async function fetchGameState(gameId) {
   if (!program) throw new Error("Program not initialized. Call connectWallet first.");
